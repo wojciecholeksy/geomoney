@@ -1,0 +1,46 @@
+.tlo_services {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: calc(50% - 1920px / 2);
+  opacity: 0.7;
+}
+
+.home {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: calc(50% - 1920px / 2);
+
+  background: rgba(45, 70, 88, 0.5);
+}
+
+.services_cover {
+  /* services_cover 1 */
+
+  position: absolute;
+  width: 1130px;
+  height: 87px;
+  left: 732px;
+  top: 31px;
+  background-color: #6185a3;
+}
+
+.home_return {
+  /* strona główna 3 */
+
+  position: absolute;
+  width: 97px;
+  height: 78px;
+  left: 16px;
+  top: 40px;
+}
+
+.btn_home {
+  position: absolute;
+  width: 97px;
+  height: 78px;
+  left: 16px;
+  top: 40px;
+}

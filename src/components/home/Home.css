@@ -8,7 +8,7 @@
   position: absolute;
   width: 810px;
   height: 68px;
-  left: 571px;
+  left: 28%;
   top: 84px;
 
   font-family: "Inter";
@@ -56,7 +56,7 @@
   position: absolute;
   width: 947px;
   height: 95px;
-  left: calc(50% - 947px / 2 - 0.5px);
+  left: 25%;
   top: 300px;
 
   font-family: "Inter";
