@@ -1,0 +1,20 @@
+.map {
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+}
+
+.leaflet-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home_return {
+  /* strona główna 3 */
+
+  position: absolute;
+  width: 97px;
+  height: 78px;
+  left: 16px;
+  top: 40px;
+}

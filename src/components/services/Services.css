@@ -37,10 +37,125 @@
   top: 40px;
 }
 
-.btn_home {
+.return_home_2 {
   position: absolute;
-  width: 97px;
-  height: 78px;
-  left: 16px;
-  top: 40px;
+  width: 122px;
+  height: 98px;
+  left: 1753px;
+  top: 39px;
+}
+
+.banks {
+  /* Group_banks */
+
+  position: absolute;
+  width: 180px;
+  height: 150px;
+  left: 323px;
+  top: 109px;
+}
+
+.banks_list {
+  /* Lista banków */
+
+  position: absolute;
+  width: 192px;
+  height: 37px;
+  left: 315px;
+  top: 256px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #000000;
+  background: aquamarine;
+}
+
+.clients {
+  /* Group_clients */
+
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  left: 333px;
+  top: 305px;
+}
+
+.clients_list {
+  /* Lista klientów */
+
+  position: absolute;
+  width: 202px;
+  height: 37px;
+  left: 315px;
+  top: 433px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #000000;
+  background: aquamarine;
+}
+
+.workers {
+  /* Group_workers */
+
+  position: absolute;
+  width: 160px;
+  height: 150px;
+  left: 333px;
+  top: 485px;
+}
+
+.workers_list {
+  /* Lista pracowników */
+
+  position: absolute;
+  width: 263px;
+  height: 37px;
+  left: 279px;
+  top: 635px;
+
+  font-family: "Lato";
+  font-style: bold;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  background-color: aquamarine;
+  color: #000000;
+}
+
+.maps {
+  /* maps 1 */
+
+  position: absolute;
+  width: 160px;
+  height: 150px;
+  left: 336px;
+  top: 689px;
+}
+
+.maps_text {
+  /* Mapa */
+
+  position: absolute;
+  width: 85px;
+  height: 37px;
+  left: 375px;
+  top: 837px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #000000;
+  background-color: aquamarine;
 }

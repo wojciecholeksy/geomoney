@@ -1,0 +1,58 @@
+.about_title {
+  /* O projekcie */
+
+  position: absolute;
+  width: 322px;
+  height: 76px;
+  left: calc(50% - 322px / 2 - 671px);
+  top: 50px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+}
+
+.text_1 {
+  position: absolute;
+  width: 1400px;
+  height: 738px;
+  left: 236px;
+  top: 185px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.about_map {
+  /* mapa */
+
+  position: absolute;
+  width: 1380px;
+  height: 513px;
+  left: 0px;
+  top: 909px;
+}
+
+.text_2 {
+  position: absolute;
+  width: 1400px;
+  height: 746px;
+  left: 235px;
+  top: 1670px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}

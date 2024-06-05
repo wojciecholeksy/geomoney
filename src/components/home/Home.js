@@ -12,7 +12,9 @@ function Home() {
         <Link to="/services">
           <button className="btn_start">START</button>
         </Link>
-        <div className="btn_about">O projekcie</div>
+        <Link to="/about">
+          <button className="btn_about">O projekcie</button>
+        </Link>
         <div className="home_title">GEOPORTAL</div>
         <div className="home_subtitle">BAZA DANYCH BANKOWYCH</div>
       </div>
