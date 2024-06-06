@@ -34,7 +34,7 @@ function About() {
         ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean
         non hendrerit ex, et elementum lectus. Integer viverra odio id odio
         dignissim malesuada.
-        <img className="about_map" src={About_map}></img>
+        <img className="about_map" src={About_map} alt="Tło z mapą"></img>
       </span>
 
       <span className="text_2">
@@ -66,7 +66,11 @@ function About() {
       </span>
       <Link to="/">
         <button className="btn_home_2">
-          <img className="return_home_2" src={Return_home_2}></img>
+          <img
+            className="return_home_2"
+            src={Return_home_2}
+            alt="Przycisk powrotny"
+          ></img>
         </button>
       </Link>
     </div>

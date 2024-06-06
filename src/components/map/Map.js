@@ -54,7 +54,11 @@ function Map() {
       <div className="back">
         <Link to="/">
           <button className="btn_home">
-            <img className="home_return" src={Home_return}></img>
+            <img
+              className="home_return"
+              src={Home_return}
+              alt="Przycisk powrotny"
+            ></img>
           </button>
         </Link>
       </div>

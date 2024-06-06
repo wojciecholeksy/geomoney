@@ -159,3 +159,13 @@
   color: #000000;
   background-color: aquamarine;
 }
+
+.services_pictures {
+  /* services_right 1 */
+
+  position: absolute;
+  width: 901px;
+  height: 700px;
+  left: 807px;
+  top: 140px;
+}
