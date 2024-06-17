@@ -1,7 +1,37 @@
-.home.btn {
+/* .home.btn {
   position: absolute;
   width: 97px;
   height: 78px;
   left: 16px;
   top: 40px;
+  background-color: aqua;
+}
+
+.details_worker_page {
+  position: absolute;
+  width: 830px;
+  height: 627px;
+  left: 19px;
+  top: 114px;
+} */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details_content {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.details_worker {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.additional_content {
+  flex: 1;
 }

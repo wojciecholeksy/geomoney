@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MediaCard from "./Card";
 import { input_list } from "./Dashboard"; // Import danych
 import { HomeButton } from "../services/Services";
+import "./Details.css";
 
 function Details() {
   const { id } = useParams();
