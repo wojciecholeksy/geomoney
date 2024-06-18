@@ -1,3 +1,89 @@
+/* About.css */
+.about {
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.about.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.text_1,
+.text_2 {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.text_1.dark-text,
+.text_2.dark-text {
+  background-color: black;
+  color: white;
+}
+
+.toggle-btn {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Specyficzne style dla text_1 i text_2 */
+.text_1 {
+  position: absolute;
+  width: 1400px;
+  height: 738px;
+  left: 236px;
+  top: 185px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.text_2 {
+  position: absolute;
+  width: 1400px;
+  height: 746px;
+  left: 235px;
+  top: 1670px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.about_map {
+  position: absolute;
+  width: 1380px;
+  height: 513px;
+  left: 0px;
+  top: 909px;
+  background-color: red;
+}
+
+.return_home_2 {
+  position: absolute;
+  width: 122px;
+  height: 98px;
+  left: 1753px;
+  top: 114px;
+}
+
 .about_title {
   /* O projekcie */
 
@@ -39,6 +125,7 @@
   height: 513px;
   left: 0px;
   top: 909px;
+  background-color: red;
 }
 
 .text_2 {
@@ -55,4 +142,14 @@
   line-height: 43px;
 
   color: #000000;
+}
+
+.return_home_2 {
+  /* image 16 */
+
+  position: absolute;
+  width: 122px;
+  height: 98px;
+  left: 1753px;
+  top: 114px;
 }

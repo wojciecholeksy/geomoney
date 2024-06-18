@@ -1,18 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import MediaCard from "./Card";
-import { input_list } from "./Dashboard"; // Import danych
+import { input_list } from "./Dashboard_workers"; // Import danych
 import { HomeButton } from "../services/Services";
-import "./Details.css";
+import "./Details_workers.css";
 
-function Details() {
+function Details_workers() {
   const { id } = useParams();
   const person = input_list[id];
 
   return (
     <div className="details_worker_page">
-      <div className="home_btn> ">
-        <HomeButton />{" "}
+      <div className="home_btn">
+        <HomeButton />
       </div>
       <div className="details">
         <h1 className="details_title">SZCZEGÓŁY NA TEMAT PRACOWNIKA</h1>
@@ -28,7 +27,6 @@ function Details() {
           <p>{person.content}</p>
         </div>
         <div>
-          {/* Możesz dodać więcej elementów tutaj */}
           <p>Dodatkowa zawartość strony</p>
         </div>
       </div>
@@ -36,7 +34,7 @@ function Details() {
   );
 }
 
-export default Details;
+export default Details_workers;
 
 // import React from "react";
 // import { useParams } from "react-router-dom";

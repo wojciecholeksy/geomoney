@@ -97,6 +97,7 @@ import Workers from "../temporary/Group_workers.png";
 import Maps from "../temporary/maps.jpg";
 import Services_pictures from "../temporary/services_pictures.png";
 import { Link } from "react-router-dom";
+import Return_home_2 from "../temporary/return_home_2.png";
 
 export const HomeButton = () => (
   <Link to="/">
@@ -126,7 +127,7 @@ function Services() {
         ></img>
         <div className="options">
           <HomeButton /> {/* Użyj wyeksportowanego przycisku */}
-          <Link to="/">
+          <Link to="/services/dashboard/banks">
             <button className="btn_banks">
               <img
                 className="banks"
@@ -136,7 +137,7 @@ function Services() {
               <span className="banks_list">Lista banków</span>
             </button>
           </Link>
-          <Link to="/">
+          <Link to="/services/dashboard/clients">
             <button className="btn_clients">
               <img
                 className="clients"
@@ -146,7 +147,7 @@ function Services() {
               <span className="clients_list">Lista klientów</span>
             </button>
           </Link>
-          <Link to="/services/dashboard">
+          <Link to="/services/dashboard/workers">
             <button className="btn_workers">
               <img
                 className="workers"
@@ -160,6 +161,15 @@ function Services() {
             <button className="btn_maps">
               <img className="maps" src={Maps} alt="Odnośnik do mapy"></img>
               <span className="maps_text">Mapa</span>
+            </button>
+          </Link>
+          <Link to="/">
+            <button className="btn_home_2">
+              <img
+                className="return_home_2"
+                src={Return_home_2}
+                alt="Przycisk powrotny"
+              ></img>
             </button>
           </Link>
         </div>

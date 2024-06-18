@@ -173,42 +173,7 @@ export const input_list = [
     image: "https://cdn.pixabay.com/photo/2018/05/11/16/18/man-3390927_640.jpg",
   },
 ];
-//   return (
-//     <div>
-//       {input_list.map((item) => {
-//         return (
-//           <MediaCard
-//             name={item.name}
-//             surname={item.surname}
-//             content={item.content}
-//             image={item.image}
-//           />
-//         );
-//       })}
-//       <MediaCard />
-//     </div>
-//   );
-// }
 
-//     <div
-//       style={{
-//         display: "grid",
-//         gridTemplateColumns: "repeat(5, 1fr)",
-//         gap: "16px",
-//       }}
-//     >
-//       {input_list.map((item, index) => (
-//         <MediaCard
-//           key={index}
-//           name={item.name}
-//           surname={item.surname}
-//           content={item.content}
-//           image={item.image}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
 function Dashboard_workers() {
   return (
     <div className="home_btn">
@@ -223,7 +188,7 @@ function Dashboard_workers() {
       >
         {input_list.map((item, index) => (
           <Link
-            to={`/services/dashboard/details/${index}`}
+            to={`/services/dashboard/workers/details/${index}`}
             key={index}
             style={{ textDecoration: "none" }}
           >
@@ -239,5 +204,5 @@ function Dashboard_workers() {
     </div>
   );
 }
-// export { input_list };
+
 export default Dashboard_workers;
