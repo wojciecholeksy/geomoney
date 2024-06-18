@@ -19,3 +19,14 @@
   top: 80px;
   z-index: 9999;
 }
+
+.page_return {
+  /* image 16 */
+
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 12px;
+  top: 114px;
+  z-index: 9999;
+}
