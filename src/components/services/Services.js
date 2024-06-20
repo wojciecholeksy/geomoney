@@ -101,13 +101,13 @@ import Return_home_2 from "../temporary/return_home_2.png";
 
 export const HomeButton = () => (
   <Link to="/">
-    <button className="btn_home">
+    <div className="btn_home">
       <img
         className="home_return"
         src={Home_return}
         alt="Przycisk powrotny"
       ></img>
-    </button>
+    </div>
   </Link>
 );
 
@@ -128,49 +128,49 @@ function Services() {
         <div className="options">
           <HomeButton /> {/* Użyj wyeksportowanego przycisku */}
           <Link to="/services/dashboard/banks">
-            <button className="btn_banks">
+            <div className="btn_banks">
               <img
                 className="banks"
                 src={Banks}
                 alt="Odnośnik do listy banków"
               ></img>
               <span className="banks_list">Lista banków</span>
-            </button>
+            </div>
           </Link>
           <Link to="/services/dashboard/clients">
-            <button className="btn_clients">
+            <div className="btn_clients">
               <img
                 className="clients"
                 src={Clients}
                 alt="Odnośnik do listy klientów"
               ></img>
               <span className="clients_list">Lista klientów</span>
-            </button>
+            </div>
           </Link>
           <Link to="/services/dashboard/workers">
-            <button className="btn_workers">
+            <div className="btn_workers">
               <img
                 className="workers"
                 src={Workers}
                 alt="Odnośnik do listy pracowników"
               ></img>
               <span className="workers_list">Lista pracowników</span>
-            </button>
+            </div>
           </Link>
           <Link to="/services/map">
-            <button className="btn_maps">
+            <div className="btn_maps">
               <img className="maps" src={Maps} alt="Odnośnik do mapy"></img>
               <span className="maps_text">Mapa</span>
-            </button>
+            </div>
           </Link>
           <Link to="/">
-            <button className="btn_home_2">
+            <div className="btn_home_2">
               <img
                 className="return_home_2"
                 src={Return_home_2}
                 alt="Przycisk powrotny"
               ></img>
-            </button>
+            </div>
           </Link>
         </div>
       </div>

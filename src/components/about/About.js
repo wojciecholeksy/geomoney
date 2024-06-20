@@ -14,7 +14,9 @@ function About() {
 
   return (
     <div className={`about ${darkMode ? "dark-mode" : "light-mode"}`}>
-      <div className="about_title">O projekcie</div>
+      <div className={`about_title ${darkMode ? "dark-text" : ""}`}>
+        O projekcie
+      </div>
       <button onClick={handleToggle} className="toggle-btn">
         {darkMode ? "Light Mode" : "Dark Mode"}
       </button>
@@ -75,13 +77,13 @@ function About() {
         dignissim malesuada.
       </span>
       <Link to="/">
-        <button className="btn_home_2">
+        <div className="btn_home_2">
           <img
             className="return_home_2"
             src={Return_home_2}
             alt="Przycisk powrotny"
           ></img>
-        </button>
+        </div>
       </Link>
     </div>
   );

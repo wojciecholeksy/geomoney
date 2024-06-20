@@ -1,7 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { HomeButton } from "../services/Services";
+import ClientsCard from "./Clients_card";
+import "./Details_clients.css";
+import Return_home_2 from "../temporary/return_home_2.png";
+import { Link } from "react-router-dom";
 
 function Details_clients() {
-  return <div>Details_clients</div>;
+  const { id } = useParams();
+  const [client, setClient] = useState(null);
+
+  useEffect(() => {
+    const fetchClient = async () => {
+      try {
+        const response = await axios.get(
+          `http://127.0.0.1:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3AKlienci&maxFeatures=50&outputFormat=application%2Fjson`
+        );
+        const client = response.data.features.find(
+          (c) => c.id === id || c.properties.id === parseInt(id)
+        );
+        if (client) {
+          setClient(client.properties);
+        }
+      } catch (error) {
+        // Handle error silently
+      }
+    };
+
+    fetchClient();
+  }, [id]);
+
+  if (!client) {
+    return null;
+  }
+
+  return (
+    <div className="details_client_page">
+      <div className="home_btn">
+        <HomeButton />
+        <Link to="/services/dashboard/clients">
+          <button className="btn_home_2">
+            <img
+              className="return_home_2"
+              src={Return_home_2}
+              alt="Przycisk powrotny"
+            ></img>
+          </button>
+        </Link>
+      </div>
+      <div className="details">
+        <h1 className="details_title">SZCZEGÓŁY NA TEMAT KLIENTA</h1>
+        <div className="details_client">
+          <ClientsCard
+            name={client.name}
+            surname={client.surname}
+            image={client.image}
+            adres={client.adres}
+            bank_adres={client.bank_adres}
+          />
+        </div>
+        <div>
+          <p>Dodatkowa zawartość strony</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Details_clients;

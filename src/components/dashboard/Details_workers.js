@@ -1,30 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { input_list } from "./Dashboard_workers"; // Import danych
+import axios from "axios";
 import { HomeButton } from "../services/Services";
+import DetailsCard from "./Workers_card";
 import "./Details_workers.css";
+import Return_home_2 from "../temporary/return_home_2.png";
+import { Link } from "react-router-dom";
 
 function Details_workers() {
   const { id } = useParams();
-  const person = input_list[id];
+  const [person, setPerson] = useState(null);
+
+  useEffect(() => {
+    const fetchWorker = async () => {
+      try {
+        const response = await axios.get(
+          `http://127.0.0.1:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3APracownicy&maxFeatures=50&outputFormat=application%2Fjson`
+        );
+        const worker = response.data.features.find(
+          (w) => w.id === id || w.properties.id === parseInt(id)
+        );
+        if (worker) {
+          setPerson(worker.properties);
+        }
+      } catch (error) {
+        // Handle error silently
+      }
+    };
+
+    fetchWorker();
+  }, [id]);
+
+  if (!person) {
+    return null;
+  }
 
   return (
     <div className="details_worker_page">
       <div className="home_btn">
         <HomeButton />
+        <Link to="/services/dashboard/workers">
+          <button className="btn_home_2">
+            <img
+              className="return_home_2"
+              src={Return_home_2}
+              alt="Przycisk powrotny"
+            ></img>
+          </button>
+        </Link>
       </div>
       <div className="details">
         <h1 className="details_title">SZCZEGÓŁY NA TEMAT PRACOWNIKA</h1>
         <div className="details_worker">
-          <img
-            src={person.image}
-            alt={`${person.name} ${person.surname}`}
-            style={{ width: "400px" }}
+          <DetailsCard
+            name={person.name}
+            surname={person.surname}
+            content={person.content}
+            image={person.image}
+            adres={person.adres}
+            bank_adres={person.bank_adres}
           />
-          <h2>
-            {person.name} {person.surname}
-          </h2>
-          <p>{person.content}</p>
         </div>
         <div>
           <p>Dodatkowa zawartość strony</p>
@@ -35,53 +70,3 @@ function Details_workers() {
 }
 
 export default Details_workers;
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import MediaCard from "./Card";
-// import input_list from "./Dashboard";
-// const input_list = [
-//   // dane wejściowe jak wcześniej
-// ];
-
-// function Details() {
-//   const { id } = useParams();
-//   const person = input_list[id];
-
-//   return (
-//     <div>
-//       <MediaCard
-//         name={person.name}
-//         surname={person.surname}
-//         content={person.content}
-//         image={person.image}
-//       />
-//     </div>
-//   );
-// }
-
-// export default Details;
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import MediaCard from "./Card";
-// import input_list from "./Dashboard"; // Import Dashboard_workers, aby mieć dostęp do danych
-// import Dashboard_workers from "./Dashboard";
-// function Details() {
-//   const { id } = useParams();
-//   const input_list = Dashboard_workers.getData(); // Funkcja zwracająca dane z Dashboard_workers
-//   const person = input_list[id];
-
-//   return (
-//     <div>
-//       <MediaCard
-//         name={person.name}
-//         surname={person.surname}
-//         content={person.content}
-//         image={person.image}
-//       />
-//     </div>
-//   );
-// }
-
-// export default Details;
