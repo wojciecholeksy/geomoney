@@ -6,7 +6,7 @@
 .toggle_view_btn {
   margin: 10px 0;
   padding: 30px 20px;
-  background-color: #4caf50;
+  background-color: #08406e;
   color: white;
   border: none;
   cursor: pointer;
@@ -14,7 +14,7 @@
 }
 
 .toggle_view_btn:hover {
-  background-color: #45a049;
+  background-color: #004e81;
 }
 
 .workers_table {
@@ -29,7 +29,7 @@
 }
 
 .workers_table th {
-  background-color: #4caf50;
+  background-color: #00607e;
   color: white;
   text-align: left;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { HomeButton } from "../services/Services";
 import ClientsCard from "./Clients_card";
@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 function Details_clients() {
   const { id } = useParams();
   const [client, setClient] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchClient = async () => {
@@ -31,6 +32,10 @@ function Details_clients() {
     fetchClient();
   }, [id]);
 
+  const handleViewOnMap = () => {
+    navigate(`/services/map?objectId=${id}`);
+  };
+
   if (!client) {
     return null;
   }
@@ -40,13 +45,11 @@ function Details_clients() {
       <div className="home_btn">
         <HomeButton />
         <Link to="/services/dashboard/clients">
-          <button className="btn_home_2">
-            <img
-              className="return_home_2"
-              src={Return_home_2}
-              alt="Przycisk powrotny"
-            ></img>
-          </button>
+          <img
+            className="return_home_2"
+            src={Return_home_2}
+            alt="Przycisk powrotny"
+          ></img>
         </Link>
       </div>
       <div className="details">
@@ -59,6 +62,9 @@ function Details_clients() {
             adres={client.adres}
             bank_adres={client.bank_adres}
           />
+          <button onClick={handleViewOnMap} className="view_on_map_btn">
+            Zobacz na mapie
+          </button>
         </div>
         <div>
           <p>Dodatkowa zawartość strony</p>

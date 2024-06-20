@@ -57,7 +57,7 @@
 .text_2 {
   position: absolute;
   width: 1400px;
-  height: 746px;
+  height: 1046px;
   left: 235px;
   top: 1670px;
   font-family: "Lato";
@@ -69,10 +69,10 @@
 
 .about_map {
   position: absolute;
-  width: 1380px;
-  height: 513px;
+  width: 1080px;
+  height: 1013px;
   left: 0px;
-  top: 909px;
+  top: 1109px;
   background-color: red;
 }
 
@@ -80,7 +80,7 @@
   position: absolute;
   width: 122px;
   height: 98px;
-  left: 1753px;
+  left: 1953px;
   top: 114px;
 }
 

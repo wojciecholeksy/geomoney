@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { HomeButton } from "../services/Services";
 import DetailsCard from "./Workers_card";
@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 function Details_workers() {
   const { id } = useParams();
   const [person, setPerson] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchWorker = async () => {
@@ -31,6 +32,10 @@ function Details_workers() {
     fetchWorker();
   }, [id]);
 
+  const handleViewOnMap = () => {
+    navigate(`/services/map?objectId=${id}`);
+  };
+
   if (!person) {
     return null;
   }
@@ -40,13 +45,11 @@ function Details_workers() {
       <div className="home_btn">
         <HomeButton />
         <Link to="/services/dashboard/workers">
-          <button className="btn_home_2">
-            <img
-              className="return_home_2"
-              src={Return_home_2}
-              alt="Przycisk powrotny"
-            ></img>
-          </button>
+          <img
+            className="return_home_2"
+            src={Return_home_2}
+            alt="Przycisk powrotny"
+          ></img>
         </Link>
       </div>
       <div className="details">
@@ -60,6 +63,9 @@ function Details_workers() {
             adres={person.adres}
             bank_adres={person.bank_adres}
           />
+          <button onClick={handleViewOnMap} className="view_on_map_btn">
+            Zobacz na mapie
+          </button>
         </div>
         <div>
           <p>Dodatkowa zawartość strony</p>

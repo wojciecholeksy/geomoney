@@ -101,13 +101,11 @@ import Return_home_2 from "../temporary/return_home_2.png";
 
 export const HomeButton = () => (
   <Link to="/">
-    <div className="btn_home">
-      <img
-        className="home_return"
-        src={Home_return}
-        alt="Przycisk powrotny"
-      ></img>
-    </div>
+    <img
+      className="home_return"
+      src={Home_return}
+      alt="Przycisk powrotny"
+    ></img>
   </Link>
 );
 
@@ -164,22 +162,22 @@ function Services() {
             </div>
           </Link>
           <Link to="/">
-            <div className="btn_home_2">
-              <img
-                className="return_home_2"
-                src={Return_home_2}
-                alt="Przycisk powrotny"
-              ></img>
-            </div>
+            <img
+              className="return_home_2"
+              src={Return_home_2}
+              alt="Przycisk powrotny"
+            ></img>
           </Link>
         </div>
       </div>
       <div className="right_services">
-        <img
-          className="services_pictures"
-          src={Services_pictures}
-          alt="Ozdoba"
-        ></img>
+        <Link to="/about">
+          <img
+            className="services_pictures"
+            src={Services_pictures}
+            alt="Ozdoba"
+          ></img>
+        </Link>
       </div>
     </div>
   );

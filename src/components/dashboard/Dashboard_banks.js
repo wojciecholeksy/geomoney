@@ -4,9 +4,11 @@ import MediaCard from "./Card";
 import { Link } from "react-router-dom";
 import { HomeButton } from "../services/Services";
 import Return_home_2 from "../temporary/return_home_2.png";
+import "./Dashboard_banks.css";
 
 function Dashboard_banks() {
   const [banks, setBanks] = useState([]);
+  const [isTableView, setIsTableView] = useState(false);
 
   useEffect(() => {
     const fetchBanks = async () => {
@@ -27,40 +29,87 @@ function Dashboard_banks() {
     fetchBanks();
   }, []);
 
+  const toggleView = () => {
+    setIsTableView(!isTableView);
+  };
+
   return (
-    <div className="home_btn">
-      <HomeButton />
+    <div className="dashboard">
       <Link to="/services">
-        <button className="btn_home_2">
-          <img
-            className="return_home_2"
-            src={Return_home_2}
-            alt="Przycisk powrotny"
-          ></img>
-        </button>
+        <img
+          className="return_home_2"
+          src={Return_home_2}
+          alt="Przycisk powrotny"
+        />
       </Link>
-      <div
-        className="tiled_banks_list"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "16px",
-        }}
-      >
-        {banks.map((item) => (
-          <Link
-            to={`/services/dashboard/banks/details/${item.id}`}
-            key={item.id}
-            style={{ textDecoration: "none" }}
-          >
-            <MediaCard
-              name={item.name}
-              surname={item.surname}
-              image={item.image}
-            />
-          </Link>
-        ))}
+      <div className="home_btn">
+        <HomeButton className="home_button" />
       </div>
+
+      <button onClick={toggleView} className="toggle_view_btn">
+        {isTableView ? "Widok kafelkowy" : "Widok tabelaryczny"}
+      </button>
+
+      {isTableView ? (
+        <table className="banks_table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nazwa</th>
+              <th>Adres</th>
+            </tr>
+          </thead>
+          <tbody>
+            {banks.map((bank) => (
+              <tr key={bank.id}>
+                <td>
+                  <Link
+                    to={`/services/dashboard/banks/details/${bank.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    {bank.id}
+                  </Link>
+                </td>
+                <td>
+                  <Link
+                    to={`/services/dashboard/banks/details/${bank.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    {bank.name}
+                  </Link>
+                </td>
+                <td>
+                  <Link
+                    to={`/services/dashboard/banks/details/${bank.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    {bank.adress}
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <div
+          className="tiled_banks_list"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "16px",
+          }}
+        >
+          {banks.map((item) => (
+            <Link
+              to={`/services/dashboard/banks/details/${item.id}`}
+              key={item.id}
+              style={{ textDecoration: "none" }}
+            >
+              <MediaCard name={item.name} image={item.image} />
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
