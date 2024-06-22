@@ -57,7 +57,7 @@
 .text_2 {
   position: absolute;
   width: 1400px;
-  height: 746px;
+  height: 1046px;
   left: 235px;
   top: 1670px;
   font-family: "Lato";
@@ -69,10 +69,10 @@
 
 .about_map {
   position: absolute;
-  width: 1380px;
-  height: 513px;
+  width: 1080px;
+  height: 1013px;
   left: 0px;
-  top: 909px;
+  top: 1109px;
   background-color: red;
 }
 
@@ -80,7 +80,7 @@
   position: absolute;
   width: 122px;
   height: 98px;
-  left: 1753px;
+  left: 1953px;
   top: 114px;
 }
 
@@ -91,7 +91,7 @@
   width: 322px;
   height: 76px;
   left: calc(50% - 322px / 2 - 671px);
-  top: 50px;
+  top: 120px;
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -106,7 +106,7 @@
   width: 1400px;
   height: 738px;
   left: 236px;
-  top: 185px;
+  top: 230px;
 
   font-family: "Lato";
   font-style: normal;
@@ -133,7 +133,7 @@
   width: 1400px;
   height: 746px;
   left: 235px;
-  top: 1670px;
+  top: 1750px;
 
   font-family: "Lato";
   font-style: normal;

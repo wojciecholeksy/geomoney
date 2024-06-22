@@ -22,16 +22,16 @@
 
 .btn_start {
   position: absolute;
-  width: 293px;
-  height: 109px;
-  left: 70%;
-  top: 662px;
+  width: 400px;
+  height: 160px;
+  left: 40%;
+  top: 570px;
 
   background-color: #000000;
   font-family: "JejuGothic";
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 100px;
   line-height: 52px;
 
   color: #ffffff;
@@ -47,8 +47,8 @@
   border: none;
   background-color: transparent;
   font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
+  /* font-style: normal; */
+  font-weight: 600;
   font-size: 36px;
   line-height: 44px;
 }
@@ -61,8 +61,8 @@
   top: 300px;
 
   font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
+  font-style: bold;
+  font-weight: 1000;
   font-size: 64px;
   line-height: 77px;
 
